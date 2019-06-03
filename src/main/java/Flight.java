@@ -47,9 +47,6 @@ public class Flight {
         return this.passengers.size();
     }
 
-//    public void bookCustomer() {
-//        return
-//    }
 
     public Plane addPlane(PlaneType plane) {
         PlaneType[] planeList = PlaneType.values();
@@ -62,7 +59,14 @@ public class Flight {
         return null;
     }
 
+    public int calculateBagWeight(){
+        return (plane.getType().baggageAllocation() / plane.getType().getCapacity());
+    }
 
- }
+    public int getRemainingSeats () {
+        return (this.plane.getType().getCapacity() - this.getPassengerNumbers());
+    }
+
+    }
 
  

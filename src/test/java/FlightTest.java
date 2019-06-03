@@ -69,6 +69,16 @@ public class FlightTest {
     }
 
     @Test
-    public void
+    public void canCalculateBagWeight(){
+        assertEquals(50, flight.calculateBagWeight());
+    }
+
+
+    @Test
+    public void canCalculateRemainingSeats(){
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        assertEquals(298, flight.getRemainingSeats());
+    }
 
 }

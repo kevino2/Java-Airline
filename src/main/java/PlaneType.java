@@ -20,9 +20,11 @@ public enum PlaneType {
         return this.totalWeight;
     }
 
-    public int baggageAllocation (
+    public int baggageAllocation () {
             return this.totalWeight / 2;
-    )
+    }
+
+
 }
 
 
